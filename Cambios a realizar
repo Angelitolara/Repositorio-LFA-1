@@ -3,7 +3,7 @@ cont_nacionales = 0
 suma_importados = 0
 cont_importados = 0
 i = 1
-
+#Holaaa mundo
 print("Registro de 10 productos con ciclo WHILE")
 print("---------------------------------------")
 
