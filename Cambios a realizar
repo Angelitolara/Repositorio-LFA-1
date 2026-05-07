@@ -1,0 +1,39 @@
+suma_nacionales = 0
+cont_nacionales = 0
+suma_importados = 0
+cont_importados = 0
+i = 1
+
+print("Registro de 10 productos con ciclo WHILE")
+print("---------------------------------------")
+
+while i <= 10:
+    print(f"Producto {i}:")
+    try:
+        precio = float(input("  Ingrese el precio: "))
+        tipo = input("  ¿Es nacional (N) o importado (I)?: ").upper()
+
+        if tipo == 'N':
+            suma_nacionales += precio
+            cont_nacionales += 1
+            i += 1
+        elif tipo == 'I':
+            suma_importados += precio
+            cont_importados += 1
+            i += 1
+        else:
+            print("  Error: Use 'N' para nacional o 'I' para importado. Intente de nuevo.")
+    except ValueError:
+        print("  Error: Ingrese un número válido para el precio.")
+
+print("\n--- Resultados Finales ---")
+
+if cont_nacionales > 0:
+    print(f"Promedio nacionales: {suma_nacionales / cont_nacionales:.2f}")
+else:
+    print("No hubo productos nacionales.")
+
+if cont_importados > 0:
+    print(f"Promedio importados: {suma_importados / cont_importados:.2f}")
+else:
+    print("No hubo productos importados.")
