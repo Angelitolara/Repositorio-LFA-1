@@ -12,7 +12,7 @@ while i <= 10:
     try:
         precio = float(input("  Ingrese el precio: "))
         tipo = input("  ¿Es nacional (N) o importado (I)?: ").upper()
-
+#Hola gente
         if tipo == 'N':
             suma_nacionales += precio
             cont_nacionales += 1
